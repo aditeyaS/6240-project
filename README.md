@@ -1,6 +1,8 @@
 
 # SysC: Linux System Monitor
 
+![SysC](https://github.com/aditeyaS/6240-project/blob/main/img/icon.gif)
+
 SysC (C = See) is a Linux System Monitor tool which is the final project for the course System Administration and Security (CPSC 6240)
 ## Tech Stack
 
@@ -50,12 +52,14 @@ Run CLI app
 ```
 
 
-## Example
+## Screenshot
 
-UI App
+UI App Screenshot
+![UI App](https://github.com/aditeyaS/6240-project/blob/main/img/ui_scshot.png)
 
+CLI App Screenshot
+![CLI App](https://github.com/aditeyaS/6240-project/blob/main/img/cli_scshot.png)
 
-CLI App
 
 ## ToDo
 
