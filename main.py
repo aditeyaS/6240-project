@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import time
 import colorama
 import psutil
@@ -39,28 +40,30 @@ def memory_usage_stats():
     print(colorama.Fore.RESET)
 
 
-def cpu_usage():
-    print("CPU Usage:")
-    while True:
-        cpu_percentage = psutil.cpu_percent()
-        percentage_used = round(cpu_percentage)
-        bar = '█' * percentage_used + ' ' * (100 - percentage_used)
-        color = colorama.Fore.RED
-        print(color + f"\r[{bar} {cpu_percentage}%]", end="\r")
-        time.sleep(0.1)
 
-def ram_usage():
-    print("RAM Usage:")
+def cpu_ram_usage():
+    UP = "\x1B[3A"
+    CLR = "\x1B[0K"
+    print("\n\n")  # set up blank lines so cursor moves work
     while True:
+        #cpu_usage
+        cpu_percentage = psutil.cpu_percent()
+        cpu_percentage_used = round(cpu_percentage)
+        cpu_bar = '█' * cpu_percentage_used + ' ' * (100 - cpu_percentage_used)
+        cpu_color = colorama.Fore.RED
+
+        #ram_usage
         ram_percentage = psutil.virtual_memory().percent
-        percentage_used = round(ram_percentage)
-        bar = '█' * percentage_used + ' ' * (100 - percentage_used)
-        color = colorama.Fore.GREEN
-        print(color + f"\r[{bar} {ram_percentage}%]", end="\r")
+        ram_percentage_used = round(ram_percentage)
+        ram_bar = '█' * ram_percentage_used + ' ' * (100 - ram_percentage_used)
+        ram_color = colorama.Fore.GREEN
+
+        print(f"{UP}CPU Usage: [{cpu_bar} {cpu_percentage}%]{CLR}\nRAM Usage: [{ram_bar} {ram_percentage}%]{CLR}\n")
+
         time.sleep(0.1)
 
 
 system_status()
 memory_usage_stats()
-cpu_usage()
-ram_usage()
+cpu_ram_usage()
+
