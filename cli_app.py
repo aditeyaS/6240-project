@@ -56,9 +56,11 @@ def cpu_ram_usage():
         ram_percentage = psutil.virtual_memory().percent
         ram_percentage_used = round(ram_percentage)
         ram_bar = '█' * ram_percentage_used + ' ' * (100 - ram_percentage_used)
-        ram_color = colorama.Fore.GREEN
+        cpu_color = colorama.Fore.GREEN
+        reset = colorama.Fore.RESET
+        ram_color = colorama.Fore.MAGENTA
 
-        print(f"{UP}CPU Usage: [{cpu_bar} {cpu_percentage}%]{CLR}\nRAM Usage: [{ram_bar} {ram_percentage}%]{CLR}\n")
+        print(cpu_color +f"{UP}CPU Usage: [{cpu_bar}] {cpu_percentage}%{CLR}\n{reset + ram_color}RAM Usage: [{ram_bar}] {ram_percentage}%{CLR}\n{reset}")
 
         time.sleep(0.1)
 

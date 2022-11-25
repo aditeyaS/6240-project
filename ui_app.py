@@ -15,6 +15,9 @@ window.title(Config.APP_NAME_SHORT)
 window.geometry(f"{Dimensions.SCREEN_WIDTH}x{Dimensions.SCREEN_HEIGHT}")
 window.resizable(False, False)
 
+icon = PhotoImage(file="img/icon.gif")
+window.iconphoto(False, icon)
+
 window.grid_columnconfigure(0, weight=1)
 
 # <-- ROW 0 - START -->
@@ -250,11 +253,11 @@ top_process_frame.c54.grid(row=5, column=4, sticky="w")
 
 # <-- ROW 4 - START -->
 
-info_frame = Frame(window, padding=Dimensions.PADDING_L)
+info_frame = Frame(window, padding=Dimensions.PADDING_L, relief=SUNKEN)
 info_frame.grid(row=4, sticky="nswe")
 info_frame.grid_columnconfigure(0, weight=1)
 
-info_frame.title = Label(info_frame, text="SysC: System Monitor")
+info_frame.title = Label(info_frame, text=Config.APP_NAME_LONG)
 info_frame.title.grid(row=0)
 auth_list = f"{Config.AUTH_AS} | {Config.AUTH_DF} | {Config.AUTH_SB} | {Config.AUTH_TP}"
 info_frame.creators = Label(info_frame, text=auth_list)
