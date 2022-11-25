@@ -1,0 +1,5 @@
+BLACK = '#000000'
+GRAY = '#808080'
+BLUE = '#0062cc'
+RED = '#ff0000'
+GREEN = '#32CD30'
