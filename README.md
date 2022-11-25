@@ -1,4 +1,3 @@
-
 # SysC: Linux System Monitor
 
 ![SysC](https://github.com/aditeyaS/6240-project/blob/main/img/icon.gif)
@@ -8,7 +7,7 @@ SysC (C = See) is a Linux System Monitor tool which is the final project for the
 
 **Languages:** Python, Bash
 
-**Python Libraries:** psutil, Tkinter
+**Python Libraries:** psutil, colorama, Tkinter
 
 
 ## Installation
@@ -20,10 +19,10 @@ Clone the project
 
 Go to the project directory
 ```bash
-  cd 6240-prject
+  cd 6240-project
 ```
 
-Install tkinter requirements
+Install linux requirements
 ```bash
   xargs sudo apt install < linux-requirements.txt
 ```
@@ -38,7 +37,6 @@ Make script executable
   chmod u+x sysc.sh
 ```
 
-
 ## Run Locally
 
 Run UI app
@@ -51,7 +49,6 @@ Run CLI app
   ./sysc.sh --cli
 ```
 
-
 ## Screenshot
 
 UI App Screenshot
@@ -59,7 +56,6 @@ UI App Screenshot
 
 CLI App Screenshot
 ![CLI App](https://github.com/aditeyaS/6240-project/blob/main/img/cli_scshot.png)
-
 
 ## ToDo
 
