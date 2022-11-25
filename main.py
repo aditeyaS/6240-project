@@ -6,7 +6,7 @@ def system_status():
     color = colorama.Fore.YELLOW
     
     # calculate battery percentage
-    battery_percentage = psutil.sensors_battery().percent; 
+    battery_percentage = psutil.sensors_battery().percent
     print(color + f"Battery: {battery_percentage}%")
     
     # system up time
